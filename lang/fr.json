@@ -1,0 +1,30 @@
+{
+  "DDHUB": {
+    "sidebar": {
+      "title": "Drama Director",
+      "gmOnly": "Drama Director est réservé au MJ.",
+      "noPanels": "Aucun module fonctionnel enregistré.",
+      "noPanelsHint": "Installe un des modules drama-director-* pour voir les boutons ici.",
+      "panelMissing": "Panneau non enregistré.",
+      "openFailed": "Impossible d'ouvrir le panneau."
+    },
+    "settings": {
+      "language": "Langue",
+      "languageHint": "Remplacer la langue de Foundry pour les modules Drama Director.",
+      "languageAuto": "Auto (langue Foundry)"
+    },
+    "migration": {
+      "success": "Drama Director : {count} paramètres migrés depuis l'ancien module."
+    },
+    "updates": {
+      "checkBtnHint": "Vérifier les mises à jour",
+      "checking": "Recherche de mises à jour…",
+      "upToDate": "Tous les modules Drama Director sont à jour.",
+      "foundUpdates": "Mises à jour disponibles :",
+      "someErrors": "La vérification s'est terminée avec des erreurs. Voir la console.",
+      "failed": "Échec de la vérification.",
+      "openRelease": "Ouvrir la page de la release",
+      "hubAvailable": "Mise à jour du hub :"
+    }
+  }
+}

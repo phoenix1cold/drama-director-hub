@@ -1,0 +1,71 @@
+<div class="ddhub-root">
+  <header class="ddhub-header">
+    <i class="fa-solid fa-theater-masks"></i>
+    <span class="ddhub-title">{{localize "DDHUB.sidebar.title"}}</span>
+    <span class="ddhub-version">v{{hubVersion}}</span>
+    {{#if isGM}}
+      <button type="button"
+              class="ddhub-update-btn{{#if anyUpdate}} has-update{{/if}}"
+              data-action="checkUpdates"
+              title="{{localize "DDHUB.updates.checkBtnHint"}}">
+        <i class="fa-solid fa-rotate"></i>
+      </button>
+    {{/if}}
+  </header>
+
+  {{#if isGM}}
+    {{#if hubUpdate.hasUpdate}}
+      <div class="ddhub-update-row" data-action="openUpdate" data-module-id="{{hubUpdate.id}}">
+        <i class="fa-solid fa-circle-arrow-up"></i>
+        <span class="ddhub-update-text">
+          {{localize "DDHUB.updates.hubAvailable"}}
+          <strong>{{hubUpdate.current}}</strong>
+          →
+          <strong>{{hubUpdate.latest}}</strong>
+        </span>
+      </div>
+    {{/if}}
+  {{/if}}
+
+  {{#unless isGM}}
+    <div class="ddhub-empty">
+      <i class="fa-solid fa-user-shield"></i>
+      <p>{{localize "DDHUB.sidebar.gmOnly"}}</p>
+    </div>
+  {{else}}
+    {{#if empty}}
+      <div class="ddhub-empty">
+        <i class="fa-solid fa-puzzle-piece"></i>
+        <p>{{localize "DDHUB.sidebar.noPanels"}}</p>
+        <p class="ddhub-empty-hint">{{localize "DDHUB.sidebar.noPanelsHint"}}</p>
+      </div>
+    {{else}}
+      <div class="ddhub-buttons">
+        {{#each buttons}}
+          <button type="button"
+                  class="ddhub-btn{{#if hasUpdate}} has-update{{/if}}"
+                  data-action="openPanel"
+                  data-panel-id="{{id}}"
+                  data-module-id="{{moduleId}}"
+                  style="--btn-color: {{color}}"
+                  title="{{hint}}">
+            <span class="ddhub-btn-icon"><i class="{{icon}}"></i></span>
+            <span class="ddhub-btn-body">
+              <span class="ddhub-btn-label">{{label}}</span>
+              {{#if description}}<span class="ddhub-btn-desc">{{description}}</span>{{/if}}
+            </span>
+            {{#if hasUpdate}}
+              <span class="ddhub-btn-update"
+                    data-action="openUpdate"
+                    data-module-id="{{moduleId}}"
+                    title="{{localize "DDHUB.updates.openRelease"}}">
+                <i class="fa-solid fa-circle-arrow-up"></i>
+                <span class="ddhub-btn-update-ver">{{latestVersion}}</span>
+              </span>
+            {{/if}}
+          </button>
+        {{/each}}
+      </div>
+    {{/if}}
+  {{/unless}}
+</div>

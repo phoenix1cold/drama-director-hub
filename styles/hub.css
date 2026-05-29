@@ -1,0 +1,168 @@
+/* Drama Director Hub — sidebar styles */
+
+.drama-director-hub-tab .ddhub-root {
+  padding: 8px;
+  font-family: var(--font-primary, sans-serif);
+}
+
+.ddhub-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+}
+.ddhub-header i { font-size: 1.4rem; color: #e8a020; }
+.ddhub-title { flex: 1; font-weight: 600; font-size: 1.1rem; }
+.ddhub-version { font-size: 0.75rem; opacity: 0.6; }
+
+.ddhub-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 10px;
+  text-align: center;
+  opacity: 0.7;
+}
+.ddhub-empty i { font-size: 2rem; }
+.ddhub-empty-hint { font-size: 0.85rem; opacity: 0.7; }
+
+.ddhub-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ddhub-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg,
+              rgba(255,255,255,0.04),
+              rgba(0,0,0,0.10));
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.1s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.ddhub-btn:hover {
+  border-color: var(--btn-color, #888);
+  background: linear-gradient(180deg,
+              rgba(255,255,255,0.08),
+              rgba(0,0,0,0.05));
+  transform: translateX(2px);
+}
+.ddhub-btn:active { transform: translateX(0); }
+
+.ddhub-btn-icon {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--btn-color, #888);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.ddhub-btn-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+.ddhub-btn-label { font-weight: 600; }
+.ddhub-btn-desc {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Update checker ──────────────────────────────────────────────────────── */
+
+.ddhub-update-btn {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.ddhub-update-btn:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+.ddhub-update-btn.has-update {
+  color: #f3c14a;
+  border-color: rgba(243, 193, 74, 0.5);
+  animation: ddhub-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes ddhub-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(243, 193, 74, 0.45); }
+  50%      { box-shadow: 0 0 0 4px rgba(243, 193, 74, 0); }
+}
+
+.ddhub-update-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(243, 193, 74, 0.4);
+  background: linear-gradient(180deg,
+              rgba(243, 193, 74, 0.10),
+              rgba(243, 193, 74, 0.04));
+  color: #f3c14a;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.ddhub-update-row:hover {
+  background: linear-gradient(180deg,
+              rgba(243, 193, 74, 0.18),
+              rgba(243, 193, 74, 0.06));
+  border-color: rgba(243, 193, 74, 0.7);
+}
+.ddhub-update-row i { font-size: 1rem; }
+.ddhub-update-text strong { font-weight: 600; }
+
+.ddhub-btn { position: relative; }
+.ddhub-btn-update {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(243, 193, 74, 0.18);
+  border: 1px solid rgba(243, 193, 74, 0.5);
+  color: #f3c14a;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-left: 4px;
+}
+.ddhub-btn-update:hover {
+  background: rgba(243, 193, 74, 0.28);
+  border-color: rgba(243, 193, 74, 0.8);
+}
+.ddhub-btn.has-update {
+  border-color: rgba(243, 193, 74, 0.5);
+}

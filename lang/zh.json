@@ -1,0 +1,30 @@
+{
+  "DDHUB": {
+    "sidebar": {
+      "title": "Drama Director",
+      "gmOnly": "Drama Director 仅限主持人使用。",
+      "noPanels": "未注册任何功能模块。",
+      "noPanelsHint": "安装任意 drama-director-* 模块即可看到按钮。",
+      "panelMissing": "面板未注册。",
+      "openFailed": "无法打开面板。"
+    },
+    "settings": {
+      "language": "语言",
+      "languageHint": "为 Drama Director 模块设置独立语言。",
+      "languageAuto": "自动（跟随 Foundry）"
+    },
+    "migration": {
+      "success": "Drama Director：已从旧模块迁移 {count} 个设置。"
+    },
+    "updates": {
+      "checkBtnHint": "检查更新",
+      "checking": "正在检查更新…",
+      "upToDate": "所有 Drama Director 模块均为最新版本。",
+      "foundUpdates": "可用更新：",
+      "someErrors": "更新检查结束，有错误，详见控制台。",
+      "failed": "更新检查失败。",
+      "openRelease": "打开发布页",
+      "hubAvailable": "Hub 可更新："
+    }
+  }
+}

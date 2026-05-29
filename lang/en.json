@@ -1,0 +1,30 @@
+{
+  "DDHUB": {
+    "sidebar": {
+      "title": "Drama Director",
+      "gmOnly": "Drama Director is GM-only.",
+      "noPanels": "No feature modules registered.",
+      "noPanelsHint": "Install one of the drama-director-* feature modules to see buttons here.",
+      "panelMissing": "Panel is not registered.",
+      "openFailed": "Failed to open panel."
+    },
+    "settings": {
+      "language": "Language",
+      "languageHint": "Override Foundry language for Drama Director modules.",
+      "languageAuto": "Auto (Foundry language)"
+    },
+    "migration": {
+      "success": "Drama Director: migrated {count} settings from the legacy module."
+    },
+    "updates": {
+      "checkBtnHint": "Check for updates",
+      "checking": "Checking for updates…",
+      "upToDate": "All Drama Director modules are up to date.",
+      "foundUpdates": "Updates available:",
+      "someErrors": "Update check finished with errors. See console.",
+      "failed": "Update check failed.",
+      "openRelease": "Open release page",
+      "hubAvailable": "Hub update available:"
+    }
+  }
+}

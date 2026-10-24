@@ -166,3 +166,10 @@
 .ddhub-btn.has-update {
   border-color: rgba(243, 193, 74, 0.5);
 }
+
+/* Comfortable shared launcher cards. */
+.ddhub-btn { min-height:72px; border-radius:8px; padding:12px; }
+.ddhub-btn-label { font-size:15px; }
+.ddhub-btn-desc { font-size:13px; line-height:1.45; }
+.ddhub-btn:focus-visible { outline:2px solid #5e9fe8; outline-offset:2px; }
+.ddhub-btn-desc { white-space:normal; overflow-wrap:anywhere; }

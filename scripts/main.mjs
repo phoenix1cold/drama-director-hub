@@ -106,6 +106,10 @@ Hooks.once('init', () => {
   const mod = game.modules.get(HUB_ID);
   if (mod) mod.api = DDHub;
 
+  // Family-owned helpers: never rely on another feature registering them.
+  Handlebars.registerHelper('ddEq', (a, b) => a === b);
+  Handlebars.registerHelper('ddIsVideo', src => /\.(webm|mp4|ogv)(?:[?#]|$)/i.test(String(src || '')));
+
   // Hub settings (only ones the hub itself owns)
   game.settings.register(HUB_ID, 'migrationDone', {
     scope: 'world', config: false, type: Boolean, default: false,

@@ -116,6 +116,8 @@ async function _runCheck() {
       };
     }
 
+    if (installedMod.flags?.ddLocalBuild) return { id, installed: true, current, latest: current, hasUpdate: false, manifestUrl: null, releaseUrl: installedMod.url, error: null, localBuild: true };
+
     const manifestUrl = _pickManifestUrl(id, installedMod);
     if (!manifestUrl) {
       return {

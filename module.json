@@ -2,10 +2,9 @@
   "id": "drama-director-hub",
   "title": "Drama Director — Hub",
   "description": "Common hub for the Drama Director module family. Provides the sidebar button, shared API, settings migration from the legacy single-module 'drama-director'. Required by drama-director-cinematic, drama-director-footsteps, drama-director-novella and drama-director-textpics.",
-  "version": "1.0",
+  "version": "2.0",
   "compatibility": {
-    "minimum": "13",
-    "verified": "14"
+    "minimum": "13"
   },
   "authors": [
     {
@@ -17,7 +16,8 @@
     "scripts/main.mjs"
   ],
   "styles": [
-    "styles/hub.css"
+    "styles/hub.css",
+    "styles/shared-ui.css"
   ],
   "socket": true,
   "languages": [
@@ -45,10 +45,10 @@
   "templates": [
     "templates/hub-panel.hbs"
   ],
-  "flags": {},
+  "flags": {
+    "ddLocalBuild": true
+  },
   "url": "https://github.com/phoenix1cold/drama-director-hub",
-  "manifest": "https://github.com/phoenix1cold/drama-director-hub/releases/latest/download/module.json",
-  "download": "https://github.com/phoenix1cold/drama-director-hub/releases/download/v1.0/module.zip",
   "readme": "https://github.com/phoenix1cold/drama-director-hub/blob/main/README.md",
   "bugs": "https://github.com/phoenix1cold/drama-director-hub/issues"
 }
